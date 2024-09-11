@@ -15,11 +15,14 @@ Este proyecto utiliza Selenium para automatizar Test Case de la pagina https://w
 ### Paso 3: Importar el proyecto
 
 -Ir al menu de la izquierda de las 3 rayas.
+
 -Seleccionar Open y buscar el archivo descomprimido
+
 -Cargar la carpeta completa
 
 ### Paso 4: Ejecutar los scripts
 -Dentro del proyecto en la carpeta: src/java/com/ se encuentran los scripts necesarios para hacer todas las pruebas
+
 -NOTA:Dentro de cada script se encuentra comentado cada TestCase que se debia abarcar segun mi Plan de pruebas.
 
 # Clonar repositorio
