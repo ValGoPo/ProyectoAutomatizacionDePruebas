@@ -1,5 +1,6 @@
 package com.example.proyectoautomatizacion;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,9 +11,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 
-
+@Epic("Login Functionality")
+@Feature("Login Tests")
 public class LoginTest {
     WebDriver driver;
+
 
     @BeforeMethod
     public void setUp() {
@@ -21,7 +24,12 @@ public class LoginTest {
         driver.get("https://www.saucedemo.com/");
     }
 
-    @Test //TEST CASE - PROBAR LOGIN EXITOSO
+
+    @Test(description = "TEST CASE - PRUEBA DE LOGIN EXITOSO CON CREDENCIALES VALIDAS", groups = {"login"})
+    @Step("Ejecutando prueba de inicio de sesión como {user}")
+    @Severity(SeverityLevel.CRITICAL)
+    @Story("Login con credenciales correctas")
+    @Description("Esta prueba verifica que un usuario puede hacer login exitosamente con credenciales válidas.")
     public void testValidLogin() throws InterruptedException {
         // Se mapea las rutas de los selectores de la web
         WebElement username = driver.findElement(By.id("user-name"));
@@ -41,7 +49,10 @@ public class LoginTest {
         Thread.sleep(1000);
     }
 
-    @Test //TEST CASE - PROBAR LOGIN FALLIDO
+    @Test(description = "TEST CASE - PRUEBA DE LOGIN FALLIDO CON CREDENCIALES INVALIDAS", groups = {"login"})
+    @Severity(SeverityLevel.NORMAL)
+    @Story("Login con credenciales incorrectas")
+    @Description("Esta prueba verifica que un usuario no puede hacer login con credenciales inválidas.")
     public void testInvalidLogin() throws InterruptedException {
         // Se mapea las rutas de los selectores de la web
         WebElement username = driver.findElement(By.id("user-name"));
@@ -61,8 +72,12 @@ public class LoginTest {
         Thread.sleep(2000);
     }
 
+
     @AfterMethod
     public void CloseChrome() {
         driver.quit();
     }
 }
+
+//allure serve allure-results
+

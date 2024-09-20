@@ -1,5 +1,6 @@
 package com.example.proyectoautomatizacion;
 
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +10,8 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+@Epic("CheckoutTest Functionality")
+@Feature("CheckoutTest Tests")
 public class CheckoutTest {
     WebDriver driver;
 
@@ -26,7 +29,10 @@ public class CheckoutTest {
         loginButton.click();
     }
 
-    @Test //TEST CASE - PROBAR COMPLETAR LA INFORMACION DE USUARIO PARA EL CHECKOUT
+    @Test(description = "TEST CASE - PROBAR COMPLETAR LA INFORMACION DE USUARIO PARA EL CHECKOUT", groups = {"Checkout"})
+    @Severity(SeverityLevel.BLOCKER)
+    @Story("Agregar al carrito, verifica carrito y hace checkout")
+    @Description("Esta prueba verifica la funcionabilidad completa del checkout de compras.")
     public void testCheckout() throws InterruptedException {
         //Se agrega un producto
         WebElement addToCartButton = driver.findElement(By.id("add-to-cart-sauce-labs-backpack"));

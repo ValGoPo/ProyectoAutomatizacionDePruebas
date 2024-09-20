@@ -1,5 +1,7 @@
 package com.example.proyectoautomatizacion;
 
+
+import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,6 +11,9 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+
+@Epic("Logout Functionality")
+@Feature("Logout Tests")
 public class LogoutTest {
     WebDriver driver;
 
@@ -27,7 +32,10 @@ public class LogoutTest {
         Thread.sleep(2000);
     }
 
-    @Test //TEST CASE - PROBAR LA FUNCION DE LOGOUT DESDE LA PAGINA PRINCIPAL
+    @Test(description = "TEST CASE - PRUEBA DONDE SE VE REFLEJADO EL LOGOUT DE LA CUENTA", groups = {"login"})
+    @Severity(SeverityLevel.TRIVIAL)
+    @Story("Salir de la sesión activa")
+    @Description("Esta prueba verifica que un usuario puede salir de su sesión activa en la web.")
     public void testLogout() throws InterruptedException {
         //Se mapean selectores de la web para el Logout
         WebElement menuButton = driver.findElement(By.id("react-burger-menu-btn"));
