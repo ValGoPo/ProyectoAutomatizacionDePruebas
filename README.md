@@ -23,7 +23,7 @@ Este proyecto utiliza Selenium para automatizar Test Case de la pagina https://w
 ### Paso 4: Ejecutar los scripts
 -Dentro del proyecto en la carpeta: src/java/com/ se encuentran los scripts necesarios para hacer todas las pruebas
 
-### Paso 4: Herramienta de reportes Allure
+### Paso 5: Herramienta de reportes Allure
 -Instalar Allure en Windows:
 
 --Abrir PowerShell y ejecutar este codigo
@@ -45,7 +45,7 @@ scoop install allure
 ```bash
 scoop install allure
 ```
-### Paso 5: Generar reportes en AQUA
+### Paso 6: Generar reportes en AQUA
 -Ya instalado Allure se puede generar reportes con la terminal de AQUA con el siguiente comando:
 ```bash
 allure serve allure-results
