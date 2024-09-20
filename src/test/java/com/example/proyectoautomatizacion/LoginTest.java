@@ -26,7 +26,6 @@ public class LoginTest {
 
 
     @Test(description = "TEST CASE - PRUEBA DE LOGIN EXITOSO CON CREDENCIALES VALIDAS", groups = {"login"})
-    @Step("Ejecutando prueba de inicio de sesión como {user}")
     @Severity(SeverityLevel.CRITICAL)
     @Story("Login con credenciales correctas")
     @Description("Esta prueba verifica que un usuario puede hacer login exitosamente con credenciales válidas.")
