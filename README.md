@@ -4,7 +4,7 @@ Este proyecto utiliza Selenium para automatizar Test Case de la pagina https://w
 ## Herramientas
 
 - [AQUA IDE]([https://pip.pypa.io/en/stable/](https://www.jetbrains.com/es-es/aqua/))
-- Complementos (Estos de descargan automaticamente a la hora te utilizar el entorno)
+- Complementos (Estos se descargan automaticamente a la hora te utilizar el entorno)
 
 ## Proceso para ejecutar mi proyecto
 
