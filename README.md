@@ -3,10 +3,13 @@
 Este proyecto utiliza Selenium para automatizar Test Case de la pagina https://www.saucedemo.com/
 ## Herramientas
 
-- [AQUA IDE]([https://pip.pypa.io/en/stable/](https://www.jetbrains.com/es-es/aqua/))
-- Complementos (Estos se descargan automaticamente a la hora te utilizar el entorno)
+-[AQUA IDE]([https://www.google.com](https://www.jetbrains.com/es-es/aqua/))
+- Complementos (Estos se descargan automaticamente a la hora de utilizar el entorno, incluso si hacen falta el ambiente se lo indica y los puede descargar desde el mismo menu de creacion de proyecto)
 
 ## Proceso para ejecutar mi proyecto
+
+# Clonar repositorio
+-Se puede clonar el repositorio en AQUA con el link proporcionado por GitHub, desde el control de versiones del IDE.
 
 ### Paso 1: Unzip el archivo descargado del repositorio.
 
@@ -22,6 +25,9 @@ Este proyecto utiliza Selenium para automatizar Test Case de la pagina https://w
 
 ### Paso 4: Ejecutar los scripts
 -Dentro del proyecto en la carpeta: src/java/com/ se encuentran los scripts necesarios para hacer todas las pruebas
+-Estos se ejecutan simplemente dandole click derecho encima del Test y darle a la opcion Run 
+
+-NOTA:Dentro de cada script se encuentra comentado cada TestCase que se debia abarcar segun mi Plan de pruebas.
 
 ### Paso 5: Herramienta de reportes Allure
 -Instalar Allure en Windows:
@@ -51,7 +57,5 @@ scoop install allure
 allure serve allure-results
 ```
 
--NOTA:Dentro de cada script se encuentra comentado cada TestCase que se debia abarcar segun mi Plan de pruebas.
 
-# Clonar repositorio
--Se puede incluso clonar el repositorio en AQUA con el link proporcionado por GitHub.
+
